@@ -35,7 +35,7 @@ h1, h2 {
     margin: 0 auto;
 }
 
-video {
+.video {
     max-width: 100%; 
     width: 500px; 
     height: auto; 
