@@ -25,3 +25,11 @@ h1, h2 {
     color: gray;
     text-align: center;
 }
+
+.image-container img {
+    max-width: 100%; /* Ensures images are responsive */
+    width: 300px; /* Sets a consistent width for images */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
