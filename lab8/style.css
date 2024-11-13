@@ -26,10 +26,19 @@ h1, h2 {
     text-align: center;
 }
 
+/* media sizing */
 .image-container img {
-    max-width: 100%; /* Ensures images are responsive */
-    width: 300px; /* Sets a consistent width for images */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; 
+    width: 300px; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+}
+
+video {
+    max-width: 100%; 
+    width: 500px; 
+    height: auto; 
     display: block;
     margin: 0 auto;
 }
