@@ -1,0 +1,27 @@
+/* basic styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* accessibility toggle colors */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.image-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* caption styling */
+.caption {
+    font-size: 0.9em;
+    color: gray;
+    text-align: center;
+}

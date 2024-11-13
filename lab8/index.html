@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Accessibility</h1>
+
+    <!-- video section -->
+    <section>
+        <h2>Audio/Video Content</h2>
+        <p>Here’s a media file with custom controls.</p>
+        <audio controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the audio element.
+        </audio>
+        <p class="caption">Figure 1. Random YouTube Clip I found. </p>
+    </section>
+
+    <!-- accessibility feature buttons -->
+    <section>
+        <h2>Accessibility Controls</h2>
+        <button onclick="increaseTextSize()">Increase Text Size</button>
+        <button onclick="toggleColorMode()">Toggle Color Mode</button>
+    </section>
+
+    <!-- image Section -->
+    <section>
+        <h2>Image Gallery with Alt Text</h2>
+        <div class="image-container">
+            <img id="image1" src="image1.jpg" alt="Description of Image 1">
+            <button onclick="showAltText('image1')">Show Alt Text</button>
+            <p class="caption">Figure 2.Image 1.</p>
+        </div>
+        <div class="image-container">
+            <img id="image2" src="image2.jpg" alt="Description of Image 2">
+            <button onclick="showAltText('image2')">Show Alt Text</button>
+            <p class="caption">Figure 3. Image 2.</p>
+        </div>
+        <div class="image-container">
+            <img id="image3" src="image3.jpg" alt="Description of Image 3">
+            <button onclick="showAltText('image3')">Show Alt Text</button>
+            <p class="caption">Figure 4. Image 3.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
