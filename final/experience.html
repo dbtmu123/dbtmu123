@@ -6,10 +6,11 @@
   <title>Experience</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Styling for the content box */
     .content-box {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 20px;
+      max-width: 700px; /* Reduce width for better readability */
+      margin: 50px auto; /* Center the box with spacing */
+      padding: 25px; /* Add padding inside the box */
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -17,9 +18,10 @@
     }
 
     .content-box h2 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: #1a3d5d;
-      margin-bottom: 15px;
+      text-align: center; /* Center-align the main heading */
+      margin-bottom: 30px;
     }
 
     .content-box article {
@@ -32,23 +34,29 @@
       margin-bottom: 5px;
     }
 
-    .content-box article p {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-
     .content-box article span {
       display: block;
       font-size: 0.9rem;
       color: #666;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
+    .content-box article p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      text-align: justify; /* Align text for a cleaner look */
+    }
+
+    /* Dark Mode Styling */
     body.dark-mode .content-box {
       background-color: #222;
       color: #fff;
+    }
+
+    body.dark-mode .content-box article span {
+      color: #bbb;
     }
   </style>
 </head>
