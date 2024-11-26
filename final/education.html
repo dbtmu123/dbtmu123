@@ -5,16 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Education</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styling for the content box */
+    .content-section {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-section h2 {
+      font-size: 1.8rem;
+      color: #1a3d5d;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .content-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .content-section ul li {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .content-section ul li strong {
+      color: #1a3d5d;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background-color: #f0f0f0;
+      padding: 8px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* General background styling */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .background li {
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.1);
+      animation: float 25s infinite;
+      border-radius: 50%;
+    }
+
+    .background li:nth-child(1) { left: 10%; top: 20%; animation-duration: 20s; }
+    .background li:nth-child(2) { left: 25%; top: 40%; animation-duration: 15s; }
+    .background li:nth-child(3) { left: 50%; top: 10%; animation-duration: 18s; }
+    .background li:nth-child(4) { left: 75%; top: 30%; animation-duration: 22s; }
+    .background li:nth-child(5) { left: 90%; top: 50%; animation-duration: 17s; }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      50% { transform: translateY(-20px) rotate(45deg); opacity: 0.5; }
+      100% { transform: translateY(0) rotate(90deg); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
+  <ul class="background">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
   <header>
-    <ul class="background">
-        <li></li><li></li><li></li>
-        <li></li><li></li><li></li>
-        <li></li><li></li><li></li>
-        <li></li><li></li><li></li>
-        <li></li><li></li><li></li>
-      </ul>
     <nav class="menu">
       <div class="logo">Daanyaal B</div>
       <ul class="menu-items">
@@ -36,39 +123,46 @@
     </nav>
   </header>
 
+  <ul class="background">
+    <li></li><li></li><li></li>
+    <li></li><li></li><li></li>
+    <li></li><li></li><li></li>
+    <li></li><li></li><li></li>
+    <li></li><li></li><li></li>
+  </ul>
+  
   <main>
     <section class="content-section">
-  <h2>Education</h2>
-  <ul>
-    <li><strong>ISNA High School:</strong> Attended from 2017 to 2021, achieving consistent academic excellence.</li>
-    <li><strong>Toronto Metropolitan University:</strong> Currently pursuing a degree, with an expected graduation year of 2026.</li>
-  </ul>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>ISNA High School:</strong> Attended from 2017 to 2021, achieving consistent academic excellence.</li>
+        <li><strong>Toronto Metropolitan University:</strong> Currently pursuing a degree, with an expected graduation year of 2026.</li>
+      </ul>
 
-  <h2>Educational Awards</h2>
-  <ul>
-    <li><strong>Honor Roll:</strong> Recognized for outstanding performance in 2018, 2020, and 2021.</li>
-    <li><strong>Entrance Scholarship:</strong> Awarded $5,000 upon admission to TMU.</li>
-    <li><strong>Ted Rogers Badge:</strong> Completed certifications in Python, Excel, and SQL.</li>
-  </ul>
+      <h2>Educational Awards</h2>
+      <ul>
+        <li><strong>Honor Roll:</strong> Recognized for outstanding performance in 2018, 2020, and 2021.</li>
+        <li><strong>Entrance Scholarship:</strong> Awarded $5,000 upon admission to TMU.</li>
+        <li><strong>Ted Rogers Badge:</strong> Completed certifications in Python, Excel, and SQL.</li>
+      </ul>
 
-  <h2>Extracurricular Activities</h2>
-  <ul>
-    <li>Earned a Python Codecademy Certificate.</li>
-    <li>Active member of the High School Robotics Club, contributing to various projects.</li>
-    <li>Played for the High School Basketball, Soccer, and Volleyball teams.</li>
-    <li>Dedicated volunteer for the High School Recycling Initiative, promoting environmental awareness.</li>
-  </ul>
+      <h2>Extracurricular Activities</h2>
+      <ul>
+        <li>Earned a Python Codecademy Certificate.</li>
+        <li>Active member of the High School Robotics Club, contributing to various projects.</li>
+        <li>Played for the High School Basketball, Soccer, and Volleyball teams.</li>
+        <li>Dedicated volunteer for the High School Recycling Initiative, promoting environmental awareness.</li>
+      </ul>
 
-  <h2>Programming Skills</h2>
-  <div class="skills-container">
-    <div class="skill">Python</div>
-    <div class="skill">SQL</div>
-    <div class="skill">Excel</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">HTML/CSS</div>
-  </div>
-
-</section>
+      <h2>Programming Skills</h2>
+      <div class="skills-container">
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Excel</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML/CSS</div>
+      </div>
+    </section>
   </main>
   <script src="script.js"></script>
 </body>
