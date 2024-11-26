@@ -14,8 +14,28 @@
       transition: transform 0.3s ease; /* Smooth scaling */
     }
 
+    /* Styling for the content box */
     main {
       margin-top: 20px; /* Space between header and content */
+    }
+    
+        /* Allow scrolling on the entire page */
+    html, body {
+        height: 100%;
+        overflow-y: auto; /* Enable scrolling on the entire page */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Update .content-box */
+    .content-box {
+        max-width: 800px; /* Keep it centered and contained */
+        margin: 50px auto; /* Center horizontally and vertically */
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333;
     }
 
     /* Center and style the white rectangle */
