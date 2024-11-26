@@ -10,13 +10,17 @@ header {
     background-color: #f0f0f0;
     border-bottom: 2px solid #e0e0e0;
     position: fixed;
+    width: 100%; /* Ensure header spans the entire width */
+    z-index: 1000;
 }
 
 .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Space items across the width */
+    width: 100%; /* Stretch menu to full width */
     padding: 10px 20px;
+    box-sizing: border-box; /* Includes padding in width calculation */
 }
 
 .logo {
@@ -28,10 +32,11 @@ header {
 
 .menu-items {
     display: flex;
-    flex-grow: 1;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: 100%; /* Stretch items across the width */
+    justify-content: space-between; /* Add space between items */
 }
 
 .menu-items li {
