@@ -30,12 +30,13 @@ function type() {
 
 // Dark Mode and Increase Text Size Buttons
 document.addEventListener("DOMContentLoaded", () => {
-  const darkModeBtn = document.getElementById("dark-mode-btn");
-  const increaseTextBtn = document.getElementById("increase-text-btn");
+    const darkModeBtn = document.getElementById("dark-mode-btn");
+    const increaseTextBtn = document.getElementById("increase-text-btn");
 
   // Toggle Dark Mode
   darkModeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+  });
 
     // Update Typing Title Color Dynamically
     const typingTitle = document.querySelector(".typing-title");
@@ -55,14 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start the typing animation
   type();
-});
 
 const image = document.getElementById('toggleImage');
 
-image.addEventListener('click', () => {
-  image.classList.toggle('enlarged'); // Toggle the 'enlarged' class
+image.addEventListener('click', () => { 
+image.classList.toggle('enlarged');
 });
-
+    
 // Get the button element
 const clickMeButton = document.getElementById('clickMeButton');
 

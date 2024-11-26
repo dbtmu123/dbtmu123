@@ -541,7 +541,7 @@ body.increase-text {
 }
 
 /* Increased Text Size for Typing Title */
-body.increase-text .typing-title {
+body.increase-text .typing-title .content-box5 {
     font-size: 28.8px; /* Adjust to 20% larger */
 }
 
