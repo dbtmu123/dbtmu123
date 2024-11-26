@@ -13,22 +13,21 @@ body {
     background-color: #f8f8f8;
 }
 
-/* Header/Menu Styling */
 header {
     background-color: #f0f0f0;
     border-bottom: 2px solid #e0e0e0;
     position: fixed;
-    width: 100%; /* Ensure header spans the entire width */
+    width: 100%;
     z-index: 1000;
 }
 
 .menu {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space items across the width */
-    width: 100%; /* Stretch menu to full width */
+    justify-content: space-between;
+    width: 100%;
     padding: 10px 20px;
-    box-sizing: border-box; /* Includes padding in width calculation */
+    box-sizing: border-box;
 }
 
 .logo {
@@ -41,8 +40,8 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 100%; /* Stretch items across the width */
-    justify-content: space-between; /* Add space between items */
+    width: 100%;
+    justify-content: space-between;
 }
 
 .menu-items li {
@@ -73,7 +72,6 @@ header {
     color: #333;
 }
 
-/* Links Dropdown */
 .links-dropdown {
     position: relative;
 }
@@ -81,7 +79,7 @@ header {
 .links-options {
     display: none;
     position: absolute;
-    top: 100%; /* Position dropdown below the button */
+    top: 100%;
     left: 0;
     background: #ffffff;
     border: 1px solid #ddd;
@@ -120,9 +118,6 @@ header {
     background: #e0e0e0;
 }
 
-
-
-/* Background Animation Styling */
 .background {
     position: fixed;
     width: 100vw;
@@ -146,13 +141,12 @@ header {
     animation: animate 19s linear infinite;
 }
 
-/* Dark Mode for Background */
 body.dark-mode .background {
-    background: #222222; /* Dark background */
+    background: #222222;
 }
 
 body.dark-mode .background li {
-    background: rgba(130, 130, 130, 0.75); /* Light circles for dark mode */
+    background: rgba(130, 130, 130, 0.75);
 }
 
 @keyframes animate {
@@ -442,12 +436,11 @@ body.dark-mode .background li {
     animation-delay: 40s;
 }
 
-/* Main Content Styling */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 80px); /* Adjust for header height */
+    height: calc(100vh - 80px);
 }
 
 .content-section {
@@ -482,7 +475,6 @@ main {
     animation: typing 3s steps(30, end), blink 0.5s step-end infinite, erase 3s steps(30, end) 3s infinite;
 }
 
-/* Typing Animation */
 @keyframes typing {
     from {
         width: 0;
@@ -507,7 +499,6 @@ main {
     }
 }
 
-/* Accessibility Dropdown */
 .accessibility-dropdown {
     position: relative;
 }
@@ -551,64 +542,58 @@ main {
     background: #e0e0e0;
 }
 
-/* Typing Title */
 .typing-title {
     font-size: 24px;
     font-weight: bold;
-    color: #333; /* Default text color */
+    color: #333;
     overflow: hidden;
-    border-right: 2px solid #333; /* Blinking cursor */
+    border-right: 2px solid #333;
     white-space: nowrap;
     width: 0;
     animation: typing 3s steps(30, end), blink 0.5s step-end infinite, erase 3s steps(30, end) 3s infinite;
 }
 
-/* Dark Mode */
 body.dark-mode {
-    background-color: #000000; /* Black background */
-    color: #f8f8f8; /* White text for all elements */
+    background-color: #000000;
+    color: #f8f8f8;
 }
 
 body.dark-mode header {
-    background-color: #222222; /* Darker grey header */
+    background-color: #222222; 
 }
 
 body.dark-mode .menu-items a {
-    color: #f8f8f8; /* White menu links */
+    color: #f8f8f8;
 }
 
 body.dark-mode .menu-items a.active {
-    background-color: #6babff; /* Grey highlight for active link */
+    background-color: #6babff;
     color: #f8f8f8;
 }
 
 body.dark-mode .menu-items a:hover {
-    background-color: #444444; /* Slightly lighter grey */
+    background-color: #444444;
 }
 
-/* Dark Mode for Typing Title */
 body.dark-mode .typing-title {
-    color: #f8f8f8; /* White text for typing title */
-    border-right: 2px solid #f8f8f8; /* White cursor */
+    color: #f8f8f8;
+    border-right: 2px solid #f8f8f8;
 }
 
-/* Background Animation in Dark Mode */
 body.dark-mode .background {
-    background: #222222; /* Black background for animated background */
+    background: #222222; 
 }
 
 body.dark-mode .background li {
-    background: rgba(255, 255, 255, 0.2); /* Light grey circles */
+    background: rgba(255, 255, 255, 0.2); 
 }
 
-/* Increased Text Size */
 body.increase-text {
-    font-size: 150%; /* Increase font size globally */
+    font-size: 150%;
 }
 
-/* Increased Text Size for Typing Title */
 body.increase-text .typing-title .content-box5 h2 {
-    font-size: 28.8px; /* Adjust to 20% larger */
+    font-size: 28.8px; 
 }
 
 .image-container {
@@ -617,14 +602,14 @@ body.increase-text .typing-title .content-box5 h2 {
   }
 
   .image-container img {
-    width: 100%; /* Fit image in the container */
+    width: 100%;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth enlarging */
-    transform-origin: bottom right; /* Keep the bottom-right corner fixed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: bottom right;
   }
   
   .image-container img.enlarged {
-    transform: scale(1.5); /* Enlarge the image */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional shadow for focus */
+    transform: scale(1.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   }
   

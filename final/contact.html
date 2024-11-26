@@ -1,114 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"> <!-- sets the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes the page responsive to different screen sizes -->
+  <title>Contact Me</title> <!-- sets the title of the page -->
+  <link rel="stylesheet" href="style.css"> <!-- links to the external stylesheet -->
   <style>
     body {
-        transition: background-color 0.3s, color 0.3s; 
+        transition: background-color 0.3s, color 0.3s; /* adds smooth transitions for theme changes */
     }
     .dark-mode {
-        background-color: #121212; 
-        color: #ffffff;
+        background-color: #121212; /* dark background color for dark mode */
+        color: #ffffff; /* white text color for dark mode */
     }
     .dark-mode a {
-        color: #6babff; 
+        color: #6babff; /* link color in dark mode */
     }
     .dark-mode input,
     .dark-mode textarea,
     .dark-mode select {
-        background-color: #333333;
-        color: #ffffff;
-        border: 1px solid #555555;
+        background-color: #333333; /* dark input fields background */
+        color: #ffffff; /* white text for inputs */
+        border: 1px solid #555555; /* subtle border for dark mode inputs */
     }
     .dark-mode input::placeholder,
     .dark-mode textarea::placeholder {
-        color: #cccccc;
+        color: #cccccc; /* placeholder text color in dark mode */
     }
     .increase-text {
-        font-size: 1.2em; 
+        font-size: 1.2em; /* increases font size for accessibility */
     }
     .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin-top: 20px; 
-    padding: 20px;
-    width: 100%; 
-    box-sizing: border-box;
-    overflow-y: auto;
-    height: calc(100vh - 25vh); 
-}
-
+        display: flex; /* uses flexbox for layout */
+        flex-direction: column; /* stacks children vertically */
+        align-items: center; /* centers children horizontally */
+        margin-top: 20px; /* adds top margin */
+        padding: 20px; /* adds padding inside the container */
+        width: 100%; /* container takes up full width */
+        box-sizing: border-box; /* includes padding and border in width/height calculations */
+        overflow-y: auto; /* enables vertical scrolling if content overflows */
+        height: calc(100vh - 25vh); /* adjusts height relative to viewport */
+    }
     .content-container {
-    margin-top: 60px; 
-}
-
+        margin-top: 60px; /* additional top margin for spacing */
+    }
     form label {
-        font-weight: bold;
+        font-weight: bold; /* makes labels bold for better visibility */
     }
-
     form input,
     form textarea,
     form select {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
+        width: 100%; /* input fields take full width of the container */
+        padding: 10px; /* adds padding for better usability */
+        margin-top: 5px; /* adds space above inputs */
+        margin-bottom: 15px; /* adds space below inputs */
+        border: 1px solid #ccc; /* light border around inputs */
+        border-radius: 5px; /* rounds the corners of inputs */
+        box-sizing: border-box; /* includes padding and border in width/height calculations */
     }
-
     form button {
-        background-color: #0073e6;
-        color: #fff;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
+        background-color: #0073e6; /* blue background for buttons */
+        color: #fff; /* white text on buttons */
+        border: none; /* removes default border */
+        padding: 10px 15px; /* adds padding inside the buttons */
+        border-radius: 5px; /* rounds the corners of buttons */
+        cursor: pointer; /* changes cursor to pointer on hover */
     }
-
     form button:hover {
-        background-color: #005bb5;
+        background-color: #005bb5; /* darker blue on hover */
     }
-
-    </style>
+  </style>
 </head>
 <body>
     <header>
-        <nav class="menu">
-          <div class="logo">Daanyaal</div>
-          <ul class="menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li class="links-dropdown">
-              <a href="#" id="links-btn">Links</a>
-              <ul class="links-options" id="links-dropdown-menu">
-                <li><a href="https://github.com/dbtmu123/dbtmu123.github.io" target="_blank">GitHub</a></li>
-                <li><a href="https://www.torontomu.ca/programs/undergraduate/business-technology-management/" target="_blank">BTM Program</a></li>
+        <nav class="menu"> <!-- navigation menu -->
+          <div class="logo">Daanyaal</div> <!-- logo section -->
+          <ul class="menu-items"> <!-- unordered list for navigation links -->
+            <li><a href="index.html">Home</a></li> <!-- link to home page -->
+            <li><a href="education.html">Education</a></li> <!-- link to education page -->
+            <li><a href="experience.html">Experience</a></li> <!-- link to experience page -->
+            <li class="links-dropdown"> <!-- dropdown menu for additional links -->
+              <a href="#" id="links-btn">Links</a> <!-- trigger for the dropdown -->
+              <ul class="links-options" id="links-dropdown-menu"> <!-- dropdown menu items -->
+                <li><a href="https://github.com/dbtmu123/dbtmu123.github.io" target="_blank">GitHub</a></li> <!-- link to GitHub -->
+                <li><a href="https://www.torontomu.ca/programs/undergraduate/business-technology-management/" target="_blank">BTM Program</a></li> <!-- link to BTM program -->
               </ul>
             </li>
-            <li class="spacer"></li>
-            <li class="accessibility-dropdown">
-              <a href="#">Accessibility</a>
-              <ul class="accessibility-options">
-                <li><button id="dark-mode-btn">Dark Mode</button></li>
-                <li><button id="increase-text-btn">Toggle Text Size</button></li>
+            <li class="spacer"></li> <!-- spacer for layout -->
+            <li class="accessibility-dropdown"> <!-- dropdown menu for accessibility options -->
+              <a href="#">Accessibility</a> <!-- trigger for accessibility dropdown -->
+              <ul class="accessibility-options"> <!-- accessibility options -->
+                <li><button id="dark-mode-btn">Dark Mode</button></li> <!-- button for dark mode -->
+                <li><button id="increase-text-btn">Toggle Text Size</button></li> <!-- button for text size toggle -->
               </ul>
             </li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            <li><a href="#" id="clickMeButton">Click Me!</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li> <!-- active link to contact page -->
+            <li><a href="#" id="clickMeButton">Click Me!</a></li> <!-- interactive button -->
           </ul>
         </nav>
       </header>
       
-      
-      <ul class="background">
-        <li></li>
+      <ul class="background"> <!-- background decorative elements -->
+        <li></li> <!-- empty list items for styling -->
         <li></li>
         <li></li>
         <li></li>
@@ -119,82 +112,82 @@
         <li></li>
         <li></li>
       </ul>
-    <main>
-      <div class="content-container">
-        <section>
-            <h2>Contact Me</h2>
-            <form id="contactForm">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <main> <!-- main content area -->
+      <div class="content-container"> <!-- container for the form and content -->
+        <section> <!-- form section -->
+            <h2>Contact Me</h2> <!-- section heading -->
+            <form id="contactForm"> <!-- contact form -->
+                <label for="name">Full Name:</label> <!-- label for name input -->
+                <input type="text" id="name" name="name" placeholder="Your Name" required> <!-- name input field -->
                 <br><br>
                 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                <label for="email">Email Address:</label> <!-- label for email input -->
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required> <!-- email input field -->
                 <br><br>
                 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                <label for="message">Message:</label> <!-- label for message textarea -->
+                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea> <!-- message textarea -->
                 <br><br>
                 
-                <p>Employment Type:</p>
-                <label><input type="radio" name="employmentType" value="Full-Time"> Full-Time</label>
-                <label><input type="radio" name="employmentType" value="Part-Time"> Part-Time</label>
-                <label><input type="radio" name="employmentType" value="Internship"> Internship</label>
+                <p>Employment Type:</p> <!-- label for employment type options -->
+                <label><input type="radio" name="employmentType" value="Full-Time"> Full-Time</label> <!-- radio button for full-time -->
+                <label><input type="radio" name="employmentType" value="Part-Time"> Part-Time</label> <!-- radio button for part-time -->
+                <label><input type="radio" name="employmentType" value="Internship"> Internship</label> <!-- radio button for internship -->
                 <br><br>
                 
-                <p>Relevant Skills:</p>
-                <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
-                <label><input type="checkbox" name="skills" value="Python"> Python</label>
-                <label><input type="checkbox" name="skills" value="Project Management"> Project Management</label>
-                <label><input type="checkbox" name="skills" value="Data Analysis"> Data Analysis</label>
+                <p>Relevant Skills:</p> <!-- label for skills checkboxes -->
+                <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label> <!-- checkbox for JavaScript -->
+                <label><input type="checkbox" name="skills" value="Python"> Python</label> <!-- checkbox for Python -->
+                <label><input type="checkbox" name="skills" value="Project Management"> Project Management</label> <!-- checkbox for project management -->
+                <label><input type="checkbox" name="skills" value="Data Analysis"> Data Analysis</label> <!-- checkbox for data analysis -->
                 <br><br>
                 
-                <label for="referral">How did you find me?</label>
-                <select id="referral" name="referral">
-                    <option value="LinkedIn">LinkedIn</option>
-                    <option value="Personal Website">Personal Website</option>
-                    <option value="Job Board">Job Board</option>
-                    <option value="Referral">Referral</option>
+                <label for="referral">How did you find me?</label> <!-- label for referral dropdown -->
+                <select id="referral" name="referral"> <!-- dropdown for referral source -->
+                    <option value="LinkedIn">LinkedIn</option> <!-- LinkedIn option -->
+                    <option value="Personal Website">Personal Website</option> <!-- personal website option -->
+                    <option value="Job Board">Job Board</option> <!-- job board option -->
+                    <option value="Referral">Referral</option> <!-- referral option -->
                 </select>
                 <br><br>
                 
-                <button type="button" onclick="submitForm()">Submit</button>
-                <button type="reset">Clear</button>
+                <button type="button" onclick="submitForm()">Submit</button> <!-- button to submit the form -->
+                <button type="reset">Clear</button> <!-- button to reset the form -->
             </form>
         </section>
         
         <script>
-            const darkModeBtn = document.getElementById('dark-mode-btn');
-        const increaseTextBtn = document.getElementById('increase-text-btn');
-        let isDarkMode = false;
-        let isTextIncreased = false;
+            const darkModeBtn = document.getElementById('dark-mode-btn'); // button for dark mode toggle
+            const increaseTextBtn = document.getElementById('increase-text-btn'); // button for text size toggle
+            let isDarkMode = false; // tracks dark mode state
+            let isTextIncreased = false; // tracks text size state
 
-        darkModeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            isDarkMode = !isDarkMode;
-        });
+            darkModeBtn.addEventListener('click', () => { // event listener for dark mode toggle
+                document.body.classList.toggle('dark-mode');
+                isDarkMode = !isDarkMode;
+            });
 
-        increaseTextBtn.addEventListener('click', () => {
-            document.body.classList.toggle('increase-text');
-            isTextIncreased = !isTextIncreased;
-        });
+            increaseTextBtn.addEventListener('click', () => { // event listener for text size toggle
+                document.body.classList.toggle('increase-text');
+                isTextIncreased = !isTextIncreased;
+            });
 
-        function submitForm() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const employmentType = document.querySelector('input[name="employmentType"]:checked')?.value;
-            const skills = Array.from(document.querySelectorAll('input[name="skills"]:checked')).map(cb => cb.value);
-            const referral = document.getElementById('referral').value;
+            function submitForm() { // function to handle form submission
+                const name = document.getElementById('name').value; // retrieves name input
+                const email = document.getElementById('email').value; // retrieves email input
+                const message = document.getElementById('message').value; // retrieves message input
+                const employmentType = document.querySelector('input[name="employmentType"]:checked')?.value; // retrieves selected employment type
+                const skills = Array.from(document.querySelectorAll('input[name="skills"]:checked')).map(cb => cb.value); // retrieves selected skills
+                const referral = document.getElementById('referral').value; // retrieves referral source
 
-            const formData = { name, email, message, employmentType, skills, referral };
-            localStorage.setItem('contactFormData', JSON.stringify(formData));
-            alert('Your information has been saved!');
-        }
+                const formData = { name, email, message, employmentType, skills, referral }; // combines form data into an object
+                localStorage.setItem('contactFormData', JSON.stringify(formData)); // stores form data in local storage
+                alert('Your information has been saved!'); // shows confirmation alert
+            }
         </script>
         
-        <section>
-            <p>You can reach me via email at <a href="mailto:dbhagaria@torontomu.ca">dbhagaria@torontomu.ca</a>.</p>
+        <section> <!-- additional contact information section -->
+            <p>You can reach me via email at <a href="mailto:dbhagaria@torontomu.ca">dbhagaria@torontomu.ca</a>.</p> <!-- email link -->
         </section>
       </div>
     </main>

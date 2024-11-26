@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"> <!-- sets the character encoding for the document -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes the page responsive to different screen sizes -->
+  <title>Education</title> <!-- sets the title of the page -->
+  <link rel="stylesheet" href="style.css"> <!-- links to the external stylesheet -->
   <style>
     .content-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-y: auto;
-    height: calc(100vh - 25vh);
-}
+      display: flex; /* uses flexbox for layout */
+      flex-direction: column; /* stacks children vertically */
+      align-items: center; /* centers children horizontally */
+      margin-top: 20px; /* adds top margin to the section */
+      padding: 20px; /* adds padding inside the section */
+      width: 100%; /* sets the section width to 100% of the parent */
+      box-sizing: border-box; /* includes padding and border in width/height calculations */
+      overflow-y: auto; /* adds vertical scrolling if content overflows */
+      height: calc(100vh - 25vh); /* adjusts height relative to viewport */
+    }
 
-.content-section {
-    margin-top: 60px;
-}
-
+    .content-section {
+      margin-top: 60px; /* additional top margin for spacing */
+    }
   </style>
 </head>
 <body>
     <header>
-        <nav class="menu">
-          <div class="logo">Daanyaal</div>
-          <ul class="menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="experience.html" class="active">Experience</a></li>
-            <li class="links-dropdown">
-              <a href="#" id="links-btn">Links</a>
-              <ul class="links-options" id="links-dropdown-menu">
-                <li><a href="https://github.com/dbtmu123/dbtmu123.github.io" target="_blank">GitHub</a></li>
-                <li><a href="https://www.torontomu.ca/programs/undergraduate/business-technology-management/" target="_blank">BTM Program</a></li>
+        <nav class="menu"> <!-- navigation menu -->
+          <div class="logo">Daanyaal</div> <!-- logo section -->
+          <ul class="menu-items"> <!-- unordered list for navigation links -->
+            <li><a href="index.html">Home</a></li> <!-- link to home page -->
+            <li><a href="education.html">Education</a></li> <!-- link to education page -->
+            <li><a href="experience.html" class="active">Experience</a></li> <!-- link to experience page -->
+            <li class="links-dropdown"> <!-- dropdown menu for additional links -->
+              <a href="#" id="links-btn">Links</a> <!-- trigger for the dropdown -->
+              <ul class="links-options" id="links-dropdown-menu"> <!-- dropdown menu items -->
+                <li><a href="https://github.com/dbtmu123/dbtmu123.github.io" target="_blank">GitHub</a></li> <!-- link to GitHub -->
+                <li><a href="https://www.torontomu.ca/programs/undergraduate/business-technology-management/" target="_blank">BTM Program</a></li> <!-- link to BTM program -->
               </ul>
             </li>
-            <li><a href="snake.html" title="a quick project i tried a while back">Snake</a></li>
-            <li class="spacer"></li>
-            <li class="accessibility-dropdown">
-              <a href="#">Accessibility</a>
-              <ul class="accessibility-options">
-                <li><button id="dark-mode-btn">Dark Mode</button></li>
-                <li><button id="increase-text-btn">Toggle Text Size</button></li>
+            <li><a href="snake.html" title="a quick project i tried a while back">Snake</a></li> <!-- link to snake project -->
+            <li class="spacer"></li> <!-- spacer for layout -->
+            <li class="accessibility-dropdown"> <!-- dropdown menu for accessibility options -->
+              <a href="#">Accessibility</a> <!-- trigger for accessibility dropdown -->
+              <ul class="accessibility-options"> <!-- accessibility options -->
+                <li><button id="dark-mode-btn">Dark Mode</button></li> <!-- button for dark mode -->
+                <li><button id="increase-text-btn">Toggle Text Size</button></li> <!-- button for text size toggle -->
               </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="#" id="clickMeButton">Click Me!</a></li>
+            <li><a href="contact.html">Contact</a></li> <!-- link to contact page -->
+            <li><a href="#" id="clickMeButton">Click Me!</a></li> <!-- interactive button -->
           </ul>
         </nav>
       </header>
       
-      
-  <ul class="background">
-    <li></li>
+  <ul class="background"> <!-- background decorative elements -->
+    <li></li> <!-- empty list items for styling -->
     <li></li>
     <li></li>
     <li></li>
@@ -68,38 +66,38 @@
     <li></li>
   </ul>
 
-  <main>
-    <section class="content-section">
-        <div class="text-container">
-            <article class="experience-item">
-            <h3>E-Commerce Specialist</h3>
-            <p><strong>Absolute Wholesale & Suntime Luxury – Mississauga, Ontario</strong></p>
-            <p><em>December 2022 – Present</em></p>
-            <p>
+  <main> <!-- main content area -->
+    <section class="content-section"> <!-- content section -->
+        <div class="text-container"> <!-- container for text content -->
+            <article class="experience-item"> <!-- individual experience item -->
+            <h3>E-Commerce Specialist</h3> <!-- job title -->
+            <p><strong>Absolute Wholesale & Suntime Luxury – Mississauga, Ontario</strong></p> <!-- company and location -->
+            <p><em>December 2022 – Present</em></p> <!-- employment period -->
+            <p> <!-- description of responsibilities and achievements -->
                 I designed and developed an e-commerce platform for Absolute Wholesale, managing all aspects from custom web design to backend functionality. Working closely with the business owners, I aligned the website’s branding with company goals, optimized product listings, and implemented sales strategies to drive traffic and conversions. Currently, I am building a Shopify-based platform for Suntime Luxury, customizing the design to reflect its upscale branding and creating a seamless shopping experience. These projects have sharpened my skills in web design, e-commerce management, and digital business development.
             </p>
             </article>
         
-            <article class="experience-item">
-            <h3>Administrator and Manager</h3>
-            <p><strong>Absolute Wholesale – Mississauga, Ontario</strong></p>
-            <p><em>October 2021 – Present</em></p>
-            <p>
+            <article class="experience-item"> <!-- individual experience item -->
+            <h3>Administrator and Manager</h3> <!-- job title -->
+            <p><strong>Absolute Wholesale – Mississauga, Ontario</strong></p> <!-- company and location -->
+            <p><em>October 2021 – Present</em></p> <!-- employment period -->
+            <p> <!-- description of responsibilities and achievements -->
                 As the Administrator and Manager at Absolute Wholesale, I successfully oversee all administrative and inventory management operations to ensure the seamless functioning of the workplace. I take an active role in monitoring the sales department’s performance by setting weekly sales goals, preparing comprehensive sales reports, and implementing effective budgeting measures to optimize profitability. My responsibilities include managing shipment and delivery logistics, restocking inventory, and ensuring smooth operational workflows. I also process client orders with precision, handle essential company documentation, and provide technical support to clients, fostering long-lasting relationships. By maintaining a proactive approach, I contribute to the company’s efficiency and success, while also mentoring team members to promote a collaborative work environment.
             </p>
             </article>
         
-            <article class="experience-item">
-            <h3>Customer Service Representative</h3>
-            <p><strong>Sky Blue Enterprises – Mississauga, Ontario</strong></p>
-            <p><em>January 2019 – March 2020</em></p>
-            <p>
+            <article class="experience-item"> <!-- individual experience item -->
+            <h3>Customer Service Representative</h3> <!-- job title -->
+            <p><strong>Sky Blue Enterprises – Mississauga, Ontario</strong></p> <!-- company and location -->
+            <p><em>January 2019 – March 2020</em></p> <!-- employment period -->
+            <p> <!-- description of responsibilities and achievements -->
                 During my tenure at Sky Blue Enterprises, I excelled in delivering exceptional customer service by managing over 20 calls daily to address customer inquiries, resolve issues, and process orders. I also played a key role in attracting new clients through proactive engagement and upselling techniques. My role required meticulous inventory management, including tracking stock levels and coordinating timely orders with suppliers to ensure optimal warehouse operations. I consistently ensured that order packaging and shipments were completed accurately and on schedule, upholding the company’s reputation for reliability. Additionally, I provided valuable insights to management about customer preferences and operational improvements, helping refine strategies for better service delivery and operational efficiency.
             </p>
             </article>
         </div>
       </section>
   </main>
-  <script src="script.js"></script>
+  <script src="script.js"></script> <!-- links to the external JavaScript file -->
 </body>
 </html>

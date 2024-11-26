@@ -1,134 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Snake Game</title>
-  <meta charset="UTF-8">
+  <title>Snake Game</title> <!-- sets the title of the page -->
+  <meta charset="UTF-8"> <!-- sets the character encoding for the document -->
   <style>
     @font-face {
-        font-family: 'Grunge';
-        src: url('final\RESEGRG_.TTF') format('truetype');
+        font-family: 'Grunge'; /* custom font for styling */
+        src: url('final\RESEGRG_.TTF') format('truetype'); /* path to the custom font */
     }
 
     * {
-        font-family: 'Grunge';
+        font-family: 'Grunge'; /* applies the custom font to all elements */
     }
 
     html, body {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
+      height: 100%; /* makes the body fill the viewport height */
+      margin: 0; /* removes default margin */
+      display: flex; /* uses flexbox for layout */
+      flex-direction: column; /* stacks children vertically */
+      align-items: center; /* centers children horizontally */
+      justify-content: center; /* centers children vertically */
+      background: black; /* sets the background color to black */
+      color: white; /* sets text color to white */
+      font-family: Arial, sans-serif; /* fallback font if custom font fails to load */
     }
 
     h1 {
-      font-size: 20px;
-      margin: 20px 0;
+      font-size: 20px; /* sets font size for the heading */
+      margin: 20px 0; /* adds margin above and below the heading */
     }
 
     canvas {
-      border: 1px solid white;
+      border: 1px solid white; /* adds a white border around the canvas */
     }
 
     a {
-      margin-top: 20px;
-      text-decoration: none;
-      color: white;
-      padding: 10px 20px;
-      border: 2px solid white;
-      border-radius: 5px;
-      background: #222;
-      transition: background 0.3s ease, color 0.3s ease;
+      margin-top: 20px; /* adds margin above the link */
+      text-decoration: none; /* removes underline from the link */
+      color: white; /* sets link color to white */
+      padding: 10px 20px; /* adds padding inside the link */
+      border: 2px solid white; /* adds a white border */
+      border-radius: 5px; /* rounds the corners of the link */
+      background: #222; /* sets background color of the link */
+      transition: background 0.3s ease, color 0.3s ease; /* smooth transition for hover effect */
     }
 
     a:hover {
-      background: white;
-      color: black;
+      background: white; /* changes background color on hover */
+      color: black; /* changes text color on hover */
     }
   </style>
 </head>
 <body>
-  <h1>A quick game project I tried a while back</h1>
-  <canvas width="400" height="400" id="game"></canvas>
-  <div id="score">Score: 0</div>
-  <a href="https://dbtmu123.github.io/final/index.html">Back</a>
+  <h1>A quick game project I tried a while back</h1> <!-- heading for the game -->
+  <canvas width="400" height="400" id="game"></canvas> <!-- canvas element for the game -->
+  <div id="score">Score: 0</div> <!-- displays the score -->
+  <a href="https://dbtmu123.github.io/final/index.html">Back</a> <!-- link to go back -->
 
   <script>
-    var canvas = document.getElementById('game');
-var context = canvas.getContext('2d');
-var grid = 16, count = 0, score = 0;
-var snake = { x: 160, y: 160, dx: grid, dy: 0, cells: [], maxCells: 4 };
-var apple = { x: 320, y: 320 };
+    var canvas = document.getElementById('game'); // canvas element
+    var context = canvas.getContext('2d'); // context for drawing
+    var grid = 16, count = 0, score = 0; // grid size, frame count, and score
+    var snake = { x: 160, y: 160, dx: grid, dy: 0, cells: [], maxCells: 4 }; // snake properties
+    var apple = { x: 320, y: 320 }; // apple position
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function updateScore() {
-  score++; 
-  document.getElementById('score').textContent = `Score: ${score}`; 
-}
-
-function loop() {
-  requestAnimationFrame(loop);
-  if (++count < 4) return;
-  count = 0;
-  context.clearRect(0, 0, canvas.width, canvas.height);
-
-  snake.x += snake.dx;
-  snake.y += snake.dy;
-
-  if (snake.x < 0) snake.x = canvas.width - grid;
-  else if (snake.x >= canvas.width) snake.x = 0;
-  if (snake.y < 0) snake.y = canvas.height - grid;
-  else if (snake.y >= canvas.height) snake.y = 0;
-
-  snake.cells.unshift({ x: snake.x, y: snake.y });
-  if (snake.cells.length > snake.maxCells) snake.cells.pop();
-
-  context.fillStyle = 'red';
-  context.fillRect(apple.x, apple.y, grid - 1, grid - 1);
-
-  context.fillStyle = 'green';
-  snake.cells.forEach(function(cell, index) {
-    context.fillRect(cell.x, cell.y, grid - 1, grid - 1);
-
-    if (cell.x === apple.x && cell.y === apple.y) {
-      snake.maxCells++;
-      updateScore(); 
-      apple.x = getRandomInt(0, 25) * grid;
-      apple.y = getRandomInt(0, 25) * grid;
+    function getRandomInt(min, max) { // generates random integer within a range
+      return Math.floor(Math.random() * (max - min)) + min;
     }
 
-    for (var i = index + 1; i < snake.cells.length; i++) {
-      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
-        snake.x = 160;
-        snake.y = 160;
-        snake.cells = [];
-        snake.maxCells = 4;
-        snake.dx = grid;
-        snake.dy = 0;
-        apple.x = getRandomInt(0, 25) * grid;
-        apple.y = getRandomInt(0, 25) * grid;
-        score = 0; 
-        document.getElementById('score').textContent = `Score: ${score}`; 
-      }
+    function updateScore() { // updates the score display
+      score++; 
+      document.getElementById('score').textContent = `Score: ${score}`; 
     }
-  });
-}
 
-document.addEventListener('keydown', function(e) {
-  if (e.which === 37 && snake.dx === 0) { snake.dx = -grid; snake.dy = 0; }
-  else if (e.which === 38 && snake.dy === 0) { snake.dy = -grid; snake.dx = 0; }
-  else if (e.which === 39 && snake.dx === 0) { snake.dx = grid; snake.dy = 0; }
-  else if (e.which === 40 && snake.dy === 0) { snake.dy = grid; snake.dx = 0; }
-});
+    function loop() { // main game loop
+      requestAnimationFrame(loop); // schedules the next frame
+      if (++count < 4) return; // controls the game speed
+      count = 0;
+      context.clearRect(0, 0, canvas.width, canvas.height); // clears the canvas
 
-requestAnimationFrame(loop);
+      snake.x += snake.dx; // updates snake position horizontally
+      snake.y += snake.dy; // updates snake position vertically
+
+      if (snake.x < 0) snake.x = canvas.width - grid; // wraps around horizontally
+      else if (snake.x >= canvas.width) snake.x = 0;
+      if (snake.y < 0) snake.y = canvas.height - grid; // wraps around vertically
+      else if (snake.y >= canvas.height) snake.y = 0;
+
+      snake.cells.unshift({ x: snake.x, y: snake.y }); // adds new head to the snake
+      if (snake.cells.length > snake.maxCells) snake.cells.pop(); // removes tail if snake exceeds max length
+
+      context.fillStyle = 'red'; // sets apple color
+      context.fillRect(apple.x, apple.y, grid - 1, grid - 1); // draws the apple
+
+      context.fillStyle = 'green'; // sets snake color
+      snake.cells.forEach(function(cell, index) {
+        context.fillRect(cell.x, cell.y, grid - 1, grid - 1); // draws each snake segment
+
+        if (cell.x === apple.x && cell.y === apple.y) { // checks if snake eats the apple
+          snake.maxCells++; // increases snake length
+          updateScore(); 
+          apple.x = getRandomInt(0, 25) * grid; // places new apple
+          apple.y = getRandomInt(0, 25) * grid;
+        }
+
+        for (var i = index + 1; i < snake.cells.length; i++) { // checks for collisions
+          if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) { // snake collides with itself
+            snake.x = 160; // resets snake position
+            snake.y = 160;
+            snake.cells = []; // clears snake cells
+            snake.maxCells = 4; // resets snake length
+            snake.dx = grid; // resets movement direction
+            snake.dy = 0;
+            apple.x = getRandomInt(0, 25) * grid; // resets apple position
+            apple.y = getRandomInt(0, 25) * grid;
+            score = 0; // resets score
+            document.getElementById('score').textContent = `Score: ${score}`; // updates score display
+          }
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function(e) { // handles keyboard input
+      if (e.which === 37 && snake.dx === 0) { snake.dx = -grid; snake.dy = 0; } // left arrow
+      else if (e.which === 38 && snake.dy === 0) { snake.dy = -grid; snake.dx = 0; } // up arrow
+      else if (e.which === 39 && snake.dx === 0) { snake.dx = grid; snake.dy = 0; } // right arrow
+      else if (e.which === 40 && snake.dy === 0) { snake.dy = grid; snake.dx = 0; } // down arrow
+    });
+
+    requestAnimationFrame(loop); // starts the game loop
   </script>
 </body>
 </html>
