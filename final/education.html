@@ -79,15 +79,25 @@
       color: #fff;
     }
 
-    body.dark-mode .skill .content-section h3 {
+    body.dark-mode .skill {
       background-color: #444;
       color: #fff;
     }
 
-    /* Increase Text Size Button */
+        /* Fix Increase Text Size */
     body.increase-text {
-      transform: scale(1.1); /* Enlarges the box and text */
+    font-size: 1.2rem; /* Increase font size globally */
     }
+
+    body.increase-text .content-section {
+    font-size: inherit; /* Ensure the box text inherits the increased size */
+    }
+
+    /* Fix Headings in Dark Mode */
+    body.dark-mode h3 {
+    color: #ffffff; /* Set headings to white explicitly in dark mode */
+    }
+    
   </style>
 </head>
 <body>
