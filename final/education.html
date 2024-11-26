@@ -14,6 +14,10 @@
       transition: transform 0.3s ease; /* Smooth scaling */
     }
 
+    main {
+      margin-top: 20px; /* Space between header and content */
+    }
+
     /* Center and style the white rectangle */
     .content-section {
       display: flex;
@@ -22,6 +26,8 @@
       max-width: 1200px; /* Make it a wide rectangle */
       margin: 50px auto; /* Center it horizontally */
       padding: 30px;
+      max-height: calc(100vh - 100px); /* Leave space for the header and a bit of padding */
+      overflow-y: auto; /* Enable vertical scrolling */
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
