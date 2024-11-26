@@ -3,10 +3,11 @@ const titles = ["Welcome to my Site!"];
 let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-const typingTitle = document.querySelector(".typing-title");
 
 function type() {
+  const typingTitle = document.querySelector(".typing-title");
   const currentTitle = titles[titleIndex];
+
   if (isDeleting) {
     charIndex--;
   } else {
@@ -35,6 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Toggle Dark Mode
   darkModeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+
+    // Update Typing Title Color Dynamically
+    const typingTitle = document.querySelector(".typing-title");
+    if (document.body.classList.contains("dark-mode")) {
+      typingTitle.style.color = "#ffffff"; // White text in dark mode
+      typingTitle.style.borderRight = "2px solid #ffffff"; // White cursor
+    } else {
+      typingTitle.style.color = ""; // Revert to CSS default
+      typingTitle.style.borderRight = ""; // Revert to CSS default
+    }
   });
 
   // Toggle Increased Text Size

@@ -485,35 +485,45 @@ main {
     background: #e0e0e0;
 }
 
+/* Typing Title */
+.typing-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Default text color */
+    overflow: hidden;
+    border-right: 2px solid #333; /* Blinking cursor */
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(30, end), blink 0.5s step-end infinite, erase 3s steps(30, end) 3s infinite;
+}
+
 /* Dark Mode */
 body.dark-mode {
-    background-color: #000000; /* Black background for the body */
-    color: #ffffff; /* White text for the entire page */
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for all elements */
 }
 
-/* Header Styling in Dark Mode */
 body.dark-mode header {
-    background-color: #222222; /* Darker grey for the header */
+    background-color: #222222; /* Darker grey header */
 }
 
-/* Menu Links in Dark Mode */
 body.dark-mode .menu-items a {
     color: #ffffff; /* White menu links */
 }
 
 body.dark-mode .menu-items a.active {
-    background-color: #555555; /* Lighter grey highlight for active link */
+    background-color: #555555; /* Grey highlight for active link */
     color: #ffffff;
 }
 
 body.dark-mode .menu-items a:hover {
-    background-color: #444444; /* Slightly lighter grey for hover */
+    background-color: #444444; /* Slightly lighter grey */
 }
 
-/* Typing Title in Dark Mode */
+/* Dark Mode for Typing Title */
 body.dark-mode .typing-title {
     color: #ffffff; /* White text for typing title */
-    border-right: 2px solid #ffffff; /* Match text color */
+    border-right: 2px solid #ffffff; /* White cursor */
 }
 
 /* Background Animation in Dark Mode */
@@ -522,5 +532,15 @@ body.dark-mode .background {
 }
 
 body.dark-mode .background li {
-    background: rgba(255, 255, 255, 0.2); /* Light grey animated elements */
+    background: rgba(255, 255, 255, 0.2); /* Light grey circles */
+}
+
+/* Increased Text Size */
+body.increase-text {
+    font-size: 150%; /* Increase font size globally */
+}
+
+/* Increased Text Size for Typing Title */
+body.increase-text .typing-title {
+    font-size: 28.8px; /* Adjust to 20% larger */
 }
