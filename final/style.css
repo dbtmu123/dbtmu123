@@ -63,7 +63,7 @@ header {
 }
 
 .menu-items a.active {
-    background-color: #6babff;
+    background-color: #174f98;
     color: #fff;
 }
 
@@ -567,7 +567,7 @@ body.dark-mode .menu-items a {
 }
 
 body.dark-mode .menu-items a.active {
-    background-color: #6babff;
+    background-color: #174f98;
     color: #f8f8f8;
 }
 
