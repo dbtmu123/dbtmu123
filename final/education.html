@@ -6,47 +6,47 @@
   <title>Education</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Styling for the content box */
+    /* Styling for the content container */
     .content-section {
-      max-width: 900px;
+      max-width: 800px;
       margin: 50px auto;
-      padding: 40px;
+      padding: 30px;
       background-color: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .content-section h2 {
-      font-size: 1.8rem;
+    .content-section h1 {
+      font-size: 2rem;
       color: #1a3d5d;
+      text-align: center;
       margin-bottom: 20px;
+    }
+
+    .content-section article {
+      margin-bottom: 30px;
+    }
+
+    .content-section article h2 {
+      font-size: 1.5rem;
+      color: #1a3d5d;
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
-    }
-
-    .content-section ul {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-
-    .content-section ul li {
-      font-size: 1.1rem;
-      color: #444;
-      line-height: 1.8;
       margin-bottom: 10px;
     }
 
-    .content-section ul li strong {
-      color: #1a3d5d;
+    .content-section article p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 10px;
     }
 
     .skills-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 15px;
-      margin-top: 20px;
+      justify-content: center;
+      gap: 10px;
     }
 
     .skill {
@@ -123,45 +123,41 @@
     </nav>
   </header>
 
-  <ul class="background">
-    <li></li><li></li><li></li>
-    <li></li><li></li><li></li>
-    <li></li><li></li><li></li>
-    <li></li><li></li><li></li>
-    <li></li><li></li><li></li>
-  </ul>
-  
   <main>
     <section class="content-section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>ISNA High School:</strong> Attended from 2017 to 2021, achieving consistent academic excellence.</li>
-        <li><strong>Toronto Metropolitan University:</strong> Currently pursuing a degree, with an expected graduation year of 2026.</li>
-      </ul>
+      <h1>Education</h1>
 
-      <h2>Educational Awards</h2>
-      <ul>
-        <li><strong>Honor Roll:</strong> Recognized for outstanding performance in 2018, 2020, and 2021.</li>
-        <li><strong>Entrance Scholarship:</strong> Awarded $5,000 upon admission to TMU.</li>
-        <li><strong>Ted Rogers Badge:</strong> Completed certifications in Python, Excel, and SQL.</li>
-      </ul>
+      <article>
+        <h2>Institutions</h2>
+        <p><strong>ISNA High School:</strong> Attended from 2017 to 2021, achieving consistent academic excellence.</p>
+        <p><strong>Toronto Metropolitan University:</strong> Currently pursuing a degree, with an expected graduation year of 2026.</p>
+      </article>
 
-      <h2>Extracurricular Activities</h2>
-      <ul>
-        <li>Earned a Python Codecademy Certificate.</li>
-        <li>Active member of the High School Robotics Club, contributing to various projects.</li>
-        <li>Played for the High School Basketball, Soccer, and Volleyball teams.</li>
-        <li>Dedicated volunteer for the High School Recycling Initiative, promoting environmental awareness.</li>
-      </ul>
+      <article>
+        <h2>Educational Awards</h2>
+        <p><strong>Honor Roll:</strong> Recognized for outstanding performance in 2018, 2020, and 2021.</p>
+        <p><strong>Entrance Scholarship:</strong> Awarded $5,000 upon admission to TMU.</p>
+        <p><strong>Ted Rogers Badge:</strong> Completed certifications in Python, Excel, and SQL.</p>
+      </article>
 
-      <h2>Programming Skills</h2>
-      <div class="skills-container">
-        <div class="skill">Python</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Excel</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">HTML/CSS</div>
-      </div>
+      <article>
+        <h2>Extracurricular Activities</h2>
+        <p>Earned a Python Codecademy Certificate.</p>
+        <p>Active member of the High School Robotics Club, contributing to various projects.</p>
+        <p>Played for the High School Basketball, Soccer, and Volleyball teams.</p>
+        <p>Dedicated volunteer for the High School Recycling Initiative, promoting environmental awareness.</p>
+      </article>
+
+      <article>
+        <h2>Programming Skills</h2>
+        <div class="skills-container">
+          <div class="skill">Python</div>
+          <div class="skill">SQL</div>
+          <div class="skill">Excel</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">HTML/CSS</div>
+        </div>
+      </article>
     </section>
   </main>
   <script src="script.js"></script>
