@@ -544,3 +544,19 @@ body.increase-text {
 body.increase-text .typing-title {
     font-size: 28.8px; /* Adjust to 20% larger */
 }
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .image-container img {
+    width: 300px;
+    transition: transform 0.3s ease, width 0.3s ease;
+    cursor: pointer;
+  }
+
+  .image-container img.enlarged {
+    transform: scale(1.5);
+    transition: transform 0.3s ease, width 0.3s ease;
+  }

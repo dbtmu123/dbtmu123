@@ -56,3 +56,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Start the typing animation
   type();
 });
+
+const image = document.getElementById('toggleImage');
+
+image.addEventListener('click', () => { 
+image.classList.toggle('enlarged');
+});
+
+// Get the button element
+const clickMeButton = document.getElementById('clickMeButton');
+
+// Add a click event listener
+clickMeButton.addEventListener('click', () => {
+  // Prompt the user for their name
+  const name = prompt("What's your name?");
+  if (name) {
+    alert(`Hello, ${name}!`);
+  } else {
+    alert("Hello, stranger!");
+  }
+});
