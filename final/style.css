@@ -551,7 +551,7 @@ body.increase-text .typing-title {
   }
 
   .image-container img {
-    width: 300%; /* Fit image in the container */
+    width: 100%; /* Fit image in the container */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth enlarging */
     transform-origin: bottom right; /* Keep the bottom-right corner fixed */
