@@ -75,3 +75,18 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Hello, stranger!");
       }
     });
+
+const linksBtn = document.getElementById('links-btn');
+const linksMenu = document.getElementById('links-dropdown-menu');
+  
+linksBtn.addEventListener('click', () => {
+    const isVisible = linksMenu.style.display === 'block';
+    linksMenu.style.display = isVisible ? 'none' : 'block';
+});
+  
+// Optional: Close the dropdown if clicked outside
+document.addEventListener('click', (event) => {
+    if (!linksBtn.contains(event.target) && !linksMenu.contains(event.target)) {
+    linksMenu.style.display = 'none';
+    }
+});
