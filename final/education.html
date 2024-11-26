@@ -6,36 +6,36 @@
   <title>Education</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Styling for the content container */
+    /* Main container styling */
     .content-section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 50px auto;
       padding: 30px;
       background-color: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .content-section h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #1a3d5d;
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .content-section article {
       margin-bottom: 30px;
     }
 
-    .content-section article h2 {
-      font-size: 1.5rem;
+    .category {
+      margin-bottom: 30px;
+    }
+
+    .category h2 {
+      font-size: 1.6rem;
       color: #1a3d5d;
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
-    .content-section article p {
+    .category p {
       font-size: 1.1rem;
       color: #444;
       line-height: 1.6;
@@ -45,13 +45,13 @@
     .skills-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+      gap: 15px;
+      margin-top: 15px;
     }
 
     .skill {
       background-color: #f0f0f0;
-      padding: 8px 12px;
+      padding: 10px 15px;
       border-radius: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       font-size: 1rem;
@@ -127,28 +127,28 @@
     <section class="content-section">
       <h1>Education</h1>
 
-      <article>
+      <div class="category">
         <h2>Institutions</h2>
         <p><strong>ISNA High School:</strong> Attended from 2017 to 2021, achieving consistent academic excellence.</p>
         <p><strong>Toronto Metropolitan University:</strong> Currently pursuing a degree, with an expected graduation year of 2026.</p>
-      </article>
+      </div>
 
-      <article>
+      <div class="category">
         <h2>Educational Awards</h2>
         <p><strong>Honor Roll:</strong> Recognized for outstanding performance in 2018, 2020, and 2021.</p>
         <p><strong>Entrance Scholarship:</strong> Awarded $5,000 upon admission to TMU.</p>
         <p><strong>Ted Rogers Badge:</strong> Completed certifications in Python, Excel, and SQL.</p>
-      </article>
+      </div>
 
-      <article>
+      <div class="category">
         <h2>Extracurricular Activities</h2>
         <p>Earned a Python Codecademy Certificate.</p>
         <p>Active member of the High School Robotics Club, contributing to various projects.</p>
         <p>Played for the High School Basketball, Soccer, and Volleyball teams.</p>
         <p>Dedicated volunteer for the High School Recycling Initiative, promoting environmental awareness.</p>
-      </article>
+      </div>
 
-      <article>
+      <div class="category">
         <h2>Programming Skills</h2>
         <div class="skills-container">
           <div class="skill">Python</div>
@@ -157,7 +157,7 @@
           <div class="skill">JavaScript</div>
           <div class="skill">HTML/CSS</div>
         </div>
-      </article>
+      </div>
     </section>
   </main>
   <script src="script.js"></script>
