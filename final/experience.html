@@ -7,18 +7,28 @@
   <link rel="stylesheet" href="style.css">
   <style>
     /* Styling for the content box */
-    .content-box {
-      max-width: 800px; /* Make width consistent with the Education page */
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      max-height: calc(100vh - 100px); /* Leave space for the header and a bit of padding */
-      overflow-y: auto; /* Enable vertical scrolling */
-      color: #333;
+    main {
+      margin-top: 20px; /* Space between header and content */
+    }
+    
+        /* Allow scrolling on the entire page */
+    html, body {
+        height: 100%;
+        overflow-y: auto; /* Enable scrolling on the entire page */
+        margin: 0;
+        padding: 0;
     }
 
+    /* Update .content-box */
+    .content-box {
+        max-width: 800px; /* Keep it centered and contained */
+        margin: 50px auto; /* Center horizontally and vertically */
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333;
+    }
     .content-box h2 {
       font-size: 1.5rem; /* Match Education page heading size */
       color: #333;
