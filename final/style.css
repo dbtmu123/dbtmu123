@@ -487,9 +487,10 @@ main {
 
 header.dark-mode {
     background-color: #2a2a2a; /* Darker grey for sections */
+    color: #ffffff;
 }
 
-body.dark-mode .menu-items a {
+body.dark-mode .menu-items .typing-title a {
     color: #ffffff; /* White menu links */
 }
 
@@ -501,8 +502,4 @@ body.dark-mode .menu-items a.active {
 /* Increase Text Size */
 body.increase-text {
     font-size: 150%; /* Increases all text by 20% */
-}
-
-body.dark-mode .typing-title {
-    color: #ffffff; /* White text for dark mode */
 }
