@@ -14,10 +14,10 @@ body {
   }
 
   .logo {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Helvetica', serif;
     font-size: 24px;
     font-weight: bold;
-    margin-right: 20px; /* Adds space between the logo and the menu */
+    margin-right: 20px;
   }
 
   .menu-items {
@@ -55,7 +55,20 @@ body {
     background-color: #e0e0e0;
     color: #333;
   }
-  
+
+  @keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
 .background {
     position: fixed;
     width: 100vw;
