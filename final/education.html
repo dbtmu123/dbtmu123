@@ -6,6 +6,13 @@
   <title>Education</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px; /* Smaller font size for body */
+      line-height: 1.5;
+      color: #333;
+    }
+
     .content-section {
       max-width: 800px;
       margin: 50px auto;
@@ -15,10 +22,10 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .content-section h2 {
-      font-size: 1.5rem;
+    .content-section h3 {
+      font-size: 1.2rem; /* Smaller font size for headings */
       color: #1a3d5d;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .content-section ul {
@@ -28,10 +35,18 @@
     }
 
     .content-section ul li {
-      font-size: 1rem;
-      margin-bottom: 10px;
+      font-size: 0.9rem; /* Smaller font size for list items */
+      margin-bottom: 8px;
       position: relative;
       padding-left: 20px;
+    }
+
+    .content-section ul li::before {
+      content: "•";
+      color: #1a3d5d;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
     }
 
     .skills-container {
@@ -43,11 +58,11 @@
 
     .skill {
       background-color: #f0f0f0;
-      padding: 6px 10px;
-      border-radius: 15px;
-      font-size: 0.9rem;
+      padding: 4px 8px;
+      border-radius: 10px;
+      font-size: 0.8rem; /* Smaller font size for skills */
       color: #333;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     body.dark-mode {
@@ -63,14 +78,6 @@
     body.dark-mode .skill {
       background-color: #444;
       color: #fff;
-    }
-
-    body.dark-mode a {
-      color: #bbb;
-    }
-
-    body.dark-mode .menu-items a:hover {
-      background-color: #444;
     }
   </style>
 </head>
@@ -116,13 +123,13 @@
     <section class="content-section">
         <h3>Education</h3>
         <ul>
-          <li>ISNA High School (2017-2021)</li>
+          <li>Isna High School (2017-2021)</li>
           <li>Toronto Metropolitan University (2021-2026, expected)</li>
         </ul>
         
         <h3>Educational Awards</h3>
         <ul>
-          <li>High School Honor Roll (2018, 2020, 2021)</li>
+          <li>Honor Roll (2018, 2020, 2021)</li>
           <li>Entrance Scholarship of $5,000 (TMU)</li>
           <li>Ted Rogers Badge for Python, Excel, and SQL</li>
         </ul>
