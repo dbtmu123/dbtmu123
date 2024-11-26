@@ -442,7 +442,7 @@ main {
     position: absolute;
     top: 100%;
     left: 0;
-    background: #ffffff; /* White background */
+    background: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
     list-style: none;
@@ -469,39 +469,34 @@ main {
     font-size: 16px;
     text-align: left;
     cursor: pointer;
-    color: #1a3d5d; /* Dark blue */
+    color: #333;
 }
 
 .accessibility-options button:hover {
-    background: #dde7f0; /* Light blue */
+    background: #e0e0e0;
 }
 
-/* Dark Mode Styling */
+/* Dark Mode */
 body.dark-mode {
     background-color: #1a1a1a; /* Dark grey */
     color: #ffffff; /* White text */
 }
 
-header.dark-mode,
-.content-section.dark-mode {
+header.dark-mode, .content-section.dark-mode {
     background-color: #2a2a2a; /* Darker grey for sections */
     color: #ffffff;
 }
 
-.dark-mode .menu-items a {
+body.dark-mode .menu-items a {
     color: #ffffff; /* White menu links */
 }
 
-.dark-mode .menu-items a.active {
-    background-color: #4a90e2; /* Lighter blue */
+body.dark-mode .menu-items a.active {
+    background-color: #6babff; /* Blue highlight */
     color: #ffffff;
 }
 
-.dark-mode .menu-items a:hover {
-    background-color: #4a90e2;
-}
-
-/* Increased Text Size */
+/* Increase Text Size */
 body.increase-text {
-    font-size: 120%; /* Increase text size by 20% */
+    font-size: 120%; /* Increases all text by 20% */
 }

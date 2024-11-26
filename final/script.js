@@ -28,19 +28,19 @@ function type() {
 
 document.addEventListener("DOMContentLoaded", type);
 
-// accessiblities
-// select buttons
-const darkModeBtn = document.getElementById("dark-mode-btn");
-const increaseTextBtn = document.getElementById("increase-text-btn");
-
-// Toggle Dark Mode
-darkModeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    const sections = document.querySelectorAll("header, .content-section");
-    sections.forEach(section => section.classList.toggle("dark-mode"));
-});
-
-// Toggle Increased Text Size
-increaseTextBtn.addEventListener("click", () => {
-    document.body.classList.toggle("increase-text");
-});
+// Dark Mode and Increase Text Size Buttons
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeBtn = document.getElementById("dark-mode-btn");
+    const increaseTextBtn = document.getElementById("increase-text-btn");
+  
+    // Toggle Dark Mode
+    darkModeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  
+    // Toggle Increased Text Size
+    increaseTextBtn.addEventListener("click", () => {
+      document.body.classList.toggle("increase-text");
+    });
+  });
+  
