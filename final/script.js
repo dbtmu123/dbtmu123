@@ -30,13 +30,12 @@ function type() {
 
 // Dark Mode and Increase Text Size Buttons
 document.addEventListener("DOMContentLoaded", () => {
-    const darkModeBtn = document.getElementById("dark-mode-btn");
-    const increaseTextBtn = document.getElementById("increase-text-btn");
+  const darkModeBtn = document.getElementById("dark-mode-btn");
+  const increaseTextBtn = document.getElementById("increase-text-btn");
 
   // Toggle Dark Mode
   darkModeBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
-  });
 
     // Update Typing Title Color Dynamically
     const typingTitle = document.querySelector(".typing-title");
@@ -56,23 +55,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start the typing animation
   type();
-
-const image = document.getElementById('toggleImage');
-
-image.addEventListener('click', () => { 
-image.classList.toggle('enlarged');
 });
-    
+    const image = document.getElementById('toggleImage');
+
+    image.addEventListener('click', () => { 
+    image.classList.toggle('enlarged');
+});
+
 // Get the button element
-const clickMeButton = document.getElementById('clickMeButton');
+    const clickMeButton = document.getElementById('clickMeButton');
 
-// Add a click event listener
-clickMeButton.addEventListener('click', () => {
-  // Prompt the user for their name
-  const name = prompt("What's your name?");
-  if (name) {
-    alert(`Hello, ${name}!`);
-  } else {
-    alert("Hello, stranger!");
-  }
-});
+    // Add a click event listener
+    clickMeButton.addEventListener('click', () => {
+      // Prompt the user for their name
+      const name = prompt("What's your name?");
+      if (name) {
+        alert(`Hello, ${name}!`);
+      } else {
+        alert("Hello, stranger!");
+      }
+    });
