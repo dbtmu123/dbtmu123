@@ -5,7 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Education</title>
   <link rel="stylesheet" href="style.css">
- 
+  <style>
+    .content-box {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: #333;
+    }
+
+    .content-box h2 {
+      font-size: 1.8rem;
+      color: #1a3d5d;
+      margin-bottom: 15px;
+    }
+
+    .content-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+    }
+
+    .content-box ul li {
+      margin: 10px 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background-color: #f0f0f0;
+      padding: 8px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      color: #333;
+    }
+
+    body.dark-mode .content-box {
+      background-color: #222;
+      color: #fff;
+    }
+
+    body.dark-mode .skill {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -71,7 +125,41 @@
         <li></li>
         <li></li>
     </ul>
+
+    <main>
+        <div class="content-box">
+          <h2>Institutions</h2>
+          <ul>
+            <li><strong>ISNA High School:</strong> 2017-2021</li>
+            <li><strong>Toronto Metropolitan University:</strong> 2021-2026 (expected)</li>
+          </ul>
     
+          <h2>Educational Awards</h2>
+          <ul>
+            <li>HS Honor Roll (2018, 2020, 2021)</li>
+            <li>Entrance Scholarship of $5,000 (TMU)</li>
+            <li>Ted Rogers Badge for Python, Excel, and SQL</li>
+          </ul>
+    
+          <h2>Extracurricular Activities</h2>
+          <ul>
+            <li>High School Basketball, Soccer, and Volleyball Team Member</li>
+            <li>Volunteered for High School Recycling Initiative</li>
+            <li>Python Codecademy Certificate</li>
+            <li>High School Robotics Club</li>
+          </ul>
+    
+          <h2>Skills</h2>
+          <div class="skills-container">
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Excel</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">HTML/CSS</div>
+          </div>
+        </div>
+      </main>
+
   <script src="script.js"></script>
 </body>
 </html>
