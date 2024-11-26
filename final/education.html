@@ -62,84 +62,32 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    /* Styling for the background */
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
+    /* Center the box vertically */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f8f8f8;
+    }
+
+    main {
       width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .background li {
-      position: absolute;
-      display: block;
-      list-style: none;
-      width: 25px;
-      height: 25px;
-      background: rgba(0, 0, 0, 0.1);
-      animation: float 20s infinite;
-    }
-
-    .background li:nth-child(1) {
-      left: 10%;
-      top: 20%;
-      animation-duration: 15s;
-    }
-
-    .background li:nth-child(2) {
-      left: 25%;
-      top: 40%;
-      animation-duration: 12s;
-    }
-
-    .background li:nth-child(3) {
-      left: 50%;
-      top: 10%;
-      animation-duration: 18s;
-    }
-
-    .background li:nth-child(4) {
-      left: 75%;
-      top: 30%;
-      animation-duration: 10s;
-    }
-
-    .background li:nth-child(5) {
-      left: 90%;
-      top: 50%;
-      animation-duration: 14s;
-    }
-
-    /* Animation for floating effect */
-    @keyframes float {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      50% {
-        transform: translateY(-20px) rotate(45deg);
-        opacity: 0.5;
-      }
-      100% {
-        transform: translateY(0) rotate(90deg);
-        opacity: 1;
-      }
+      padding: 20px;
+      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
-  <ul class="background">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-
   <header>
+    <ul class="background">
+        <li></li><li></li><li></li>
+        <li></li><li></li><li></li>
+        <li></li><li></li><li></li>
+        <li></li><li></li><li></li>
+        <li></li><li></li><li></li>
+      </ul>
     <nav class="menu">
       <div class="logo">Daanyaal B</div>
       <ul class="menu-items">
@@ -163,38 +111,69 @@
 
   <main>
     <section class="content-section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>ISNA High School:</strong> 2017-2021</li>
-        <li><strong>Toronto Metropolitan University:</strong> 2021-2026 (expected)</li>
-      </ul>
+  <h2>Education</h2>
+  <ul>
+    <li><strong>ISNA High School:</strong> Attended from 2017 to 2021, achieving consistent academic excellence.</li>
+    <li><strong>Toronto Metropolitan University:</strong> Currently pursuing a degree, with an expected graduation year of 2026.</li>
+  </ul>
 
-      <h2>Educational Awards</h2>
-      <ul>
-        <li><strong>Honor Roll:</strong> 2018, 2020, 2021</li>
-        <li><strong>Entrance Scholarship:</strong> $5,000 (TMU)</li>
-        <li><strong>Ted Rogers Badge:</strong> Python, Excel, and SQL</li>
-      </ul>
+  <h2>Educational Awards</h2>
+  <ul>
+    <li><strong>Honor Roll:</strong> Recognized for outstanding performance in 2018, 2020, and 2021.</li>
+    <li><strong>Entrance Scholarship:</strong> Awarded $5,000 upon admission to TMU.</li>
+    <li><strong>Ted Rogers Badge:</strong> Completed certifications in Python, Excel, and SQL.</li>
+  </ul>
 
-      <h2>Extracurricular Activities</h2>
-      <ul>
-        <li>Python Codecademy Certificate</li>
-        <li>High School Robotics Club</li>
-        <li>High School Basketball, Soccer, and Volleyball Team Member</li>
-        <li>Volunteered for High School Recycling Initiative</li>
-      </ul>
+  <h2>Extracurricular Activities</h2>
+  <ul>
+    <li>Earned a Python Codecademy Certificate.</li>
+    <li>Active member of the High School Robotics Club, contributing to various projects.</li>
+    <li>Played for the High School Basketball, Soccer, and Volleyball teams.</li>
+    <li>Dedicated volunteer for the High School Recycling Initiative, promoting environmental awareness.</li>
+  </ul>
 
-      <h2>Programming Skills</h2>
-      <div class="skills-container">
-        <div class="skill">Python</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Excel</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">HTML/CSS</div>
-      </div>
-    </section>
+  <h2>Programming Skills</h2>
+  <div class="skills-container">
+    <div class="skill">Python</div>
+    <div class="skill">SQL</div>
+    <div class="skill">Excel</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">HTML/CSS</div>
+  </div>
+</section>
+<section class="content-section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>ISNA High School:</strong> Attended from 2017 to 2021, achieving consistent academic excellence.</li>
+      <li><strong>Toronto Metropolitan University:</strong> Currently pursuing a degree, with an expected graduation year of 2026.</li>
+    </ul>
+  
+    <h2>Educational Awards</h2>
+    <ul>
+      <li><strong>Honor Roll:</strong> Recognized for outstanding performance in 2018, 2020, and 2021.</li>
+      <li><strong>Entrance Scholarship:</strong> Awarded $5,000 upon admission to TMU.</li>
+      <li><strong>Ted Rogers Badge:</strong> Completed certifications in Python, Excel, and SQL.</li>
+    </ul>
+  
+    <h2>Extracurricular Activities</h2>
+    <ul>
+      <li>Earned a Python Codecademy Certificate.</li>
+      <li>Active member of the High School Robotics Club, contributing to various projects.</li>
+      <li>Played for the High School Basketball, Soccer, and Volleyball teams.</li>
+      <li>Dedicated volunteer for the High School Recycling Initiative, promoting environmental awareness.</li>
+    </ul>
+  
+    <h2>Programming Skills</h2>
+    <div class="skills-container">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Excel</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">HTML/CSS</div>
+    </div>
+  </section>
+  
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>
