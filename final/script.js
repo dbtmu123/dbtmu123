@@ -1,4 +1,4 @@
-const titles = ["hello! i'm daanyaal. welcome to my site!"];
+const titles = ["Welcome to my Site!"];
 let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

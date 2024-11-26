@@ -85,6 +85,15 @@ header {
     animation: animate 19s linear infinite;
 }
 
+/* Dark Mode for Background */
+body.dark-mode .background {
+    background: #222222; /* Dark background */
+}
+
+body.dark-mode .background li {
+    background: rgba(130, 130, 130, 0.75); /* Light circles for dark mode */
+}
+
 @keyframes animate {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -498,5 +507,5 @@ body.dark-mode .menu-items a.active {
 
 /* Increase Text Size */
 body.increase-text {
-    font-size: 120%; /* Increases all text by 20% */
+    font-size: 150%; /* Increases all text by 20% */
 }
