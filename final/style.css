@@ -1,11 +1,13 @@
   /* General Body Styling */
 
-* {
-    @font-face {
-        font-family: 'Grunge';
-        src: URL('RESEGRG_.TTF') format('truetype');
-      }
+@font-face {
+    font-family: 'Grunge';
+    src: url(RESEGRG_.TTF) format('truetype');
 }
+
+  * {
+        font-family: 'Grunge';
+      }
 
 body {
     margin: 0;
