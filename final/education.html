@@ -14,19 +14,35 @@
     }
 
     main {
-      margin-top: 60px; /* Space between header and content */
+      margin: 60px auto; /* Add space below header */
+      padding: 20px;
+      max-width: 800px; /* Set a width for readability */
     }
 
-    .content-section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    h3 {
+      font-size: 1.25rem;
       color: #333;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+    }
+
+    ul li {
       font-size: 1rem;
-      line-height: 1.6;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #333;
     }
 
     .skills-container {
@@ -51,34 +67,13 @@
       color: #fff;
     }
 
-    body.dark-mode .content-section {
-      background-color: #333;
-      color: #fff;
-    }
-
     body.dark-mode .skill {
       background-color: #444;
       color: #fff;
     }
 
-    /* Increase Text Size */
     body.increase-text {
       font-size: 1.2rem;
-    }
-
-    body.increase-text .content-section {
-      font-size: inherit;
-    }
-
-    /* Fix Headings in Dark Mode */
-    h3 {
-      color: #333;
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-    }
-
-    body.dark-mode h3 {
-      color: #fff;
     }
   </style>
 </head>
@@ -100,11 +95,9 @@
           </ul>
         </li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#" id="clickMeButton">Click Me!</a></li>
       </ul>
     </nav>
   </header>
-  
     <ul class="background">
         <li></li>
         <li></li>
@@ -146,41 +139,38 @@
         <li></li>
         <li></li>
     </ul>
-
   <main>
-    <section class="content-section">
-      <h3>Education</h3>
-      <ul>
-        <li>ISNA High School (2017-2021)</li>
-        <li>Toronto Metropolitan University (2021-2026, expected)</li>
-      </ul>
-      
-      <h3>Educational Awards</h3>
-      <ul>
-        <li>High School Honor Roll (2018, 2020, 2021)</li>
-        <li>Entrance Scholarship of $5,000 (TMU)</li>
-        <li>Ted Rogers Badge for Python, Excel, and SQL</li>
-      </ul>
+    <h3>Education</h3>
+    <ul>
+      <li>ISNA High School (2017-2021)</li>
+      <li>Toronto Metropolitan University (2021-2026, expected)</li>
+    </ul>
+    
+    <h3>Educational Awards</h3>
+    <ul>
+      <li>High School Honor Roll (2018, 2020, 2021)</li>
+      <li>Entrance Scholarship of $5,000 (TMU)</li>
+      <li>Ted Rogers Badge for Python, Excel, and SQL</li>
+    </ul>
 
-      <h3>Extracurricular Activities</h3>
-      <ul>
-        <li>High School Basketball, Soccer, and Volleyball Team Member</li>
-        <li>Volunteered for High School Recycling Initiative</li>
-        <li>Python Codecademy Certificate</li>
-        <li>Robotics Club</li>
-      </ul>
+    <h3>Extracurricular Activities</h3>
+    <ul>
+      <li>High School Basketball, Soccer, and Volleyball Team Member</li>
+      <li>Volunteered for High School Recycling Initiative</li>
+      <li>Python Codecademy Certificate</li>
+      <li>Robotics Club</li>
+    </ul>
 
-      <h3>Skills</h3>
-      <div class="skills-container">
-        <div class="skill">Python</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Excel</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">HTML/CSS</div>
-      </div>
-    </section>
+    <h3>Skills</h3>
+    <div class="skills-container">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Excel</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">HTML/CSS</div>
+    </div>
   </main>
-  
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const darkModeBtn = document.getElementById("dark-mode-btn");
