@@ -73,9 +73,9 @@ header {
 }
 
 .links-options {
-    display: none; /* Initially hidden */
+    display: none;
     position: absolute;
-    top: 100%; /* Positioned below the button */
+    top: 100%; /* Position dropdown below the button */
     left: 0;
     background: #ffffff;
     border: 1px solid #ddd;
@@ -85,7 +85,10 @@ header {
     padding: 5px 0;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 150px; /* Set a width for the dropdown */
+}
+
+.links-dropdown:hover .links-options {
+    display: block;
 }
 
 .links-options li {
@@ -95,16 +98,22 @@ header {
 
 .links-options a {
     display: block;
-    padding: 10px 15px;
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
     text-decoration: none;
+    cursor: pointer;
     color: #333;
-    font-size: 14px;
     transition: background 0.3s ease;
 }
 
 .links-options a:hover {
-    background: #f0f0f0;
+    background: #e0e0e0;
 }
+
 
 
 /* Background Animation Styling */
@@ -492,7 +501,6 @@ main {
     }
 }
 
-/*here*/ 
 /* Accessibility Dropdown */
 .accessibility-dropdown {
     position: relative;
