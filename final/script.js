@@ -1,5 +1,5 @@
 // Typing Animation Logic
-const titles = ["Welcome to my Site!"];
+const titles = ["welcome to my portfolio site!"];
 let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
