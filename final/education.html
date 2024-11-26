@@ -6,44 +6,85 @@
   <title>Education</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* Global Body Styling */
     body {
       font-family: Arial, sans-serif;
-      font-size: 14px; /* Smaller font size for body */
-      line-height: 1.5;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
       color: #333;
+      transition: transform 0.3s ease; /* Smooth scale transition */
     }
 
-    .content-section {
-      max-width: 800px;
+    /* Header Styling */
+    header {
+      background-color: #ffffff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-items {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-items a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      color: #333;
+      font-size: 0.9rem;
+    }
+
+    .menu-items a.active {
+      background-color: #444;
+      color: #fff;
+    }
+
+    /* Content Box Styling */
+    .content-box {
+      max-width: 1000px;
       margin: 50px auto;
-      padding: 20px;
+      padding: 30px;
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      transition: transform 0.3s ease; /* Smooth scale transition */
     }
 
-    .content-section h3 {
-      font-size: 1.2rem; /* Smaller font size for headings */
-      color: #1a3d5d;
-      margin-bottom: 10px;
+    .content-box h3 {
+      font-size: 1.5rem;
+      color: #333; /* Updated heading color */
+      margin-bottom: 20px;
     }
 
-    .content-section ul {
+    .content-box ul {
       list-style: none;
       padding: 0;
       margin: 0 0 20px;
     }
 
-    .content-section ul li {
-      font-size: 0.9rem; /* Smaller font size for list items */
-      margin-bottom: 8px;
-      position: relative;
+    .content-box ul li {
+      font-size: 1rem;
+      margin-bottom: 15px;
       padding-left: 20px;
+      position: relative;
     }
 
-    .content-section ul li::before {
+    .content-box ul li::before {
       content: "•";
-      color: #1a3d5d;
+      color: #333;
       position: absolute;
       left: 0;
       font-size: 1.2rem;
@@ -52,25 +93,25 @@
     .skills-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
       margin-top: 10px;
     }
 
     .skill {
       background-color: #f0f0f0;
-      padding: 4px 8px;
-      border-radius: 10px;
-      font-size: 0.8rem; /* Smaller font size for skills */
-      color: #333;
+      padding: 6px 10px;
+      border-radius: 15px;
+      font-size: 0.9rem;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
+    /* Dark Mode Styling */
     body.dark-mode {
       background-color: #222;
       color: #fff;
     }
 
-    body.dark-mode .content-section {
+    body.dark-mode .content-box {
       background-color: #333;
       color: #fff;
     }
@@ -79,79 +120,86 @@
       background-color: #444;
       color: #fff;
     }
+
+    /* Enlarged Mode Styling */
+    body.increase-text {
+      transform: scale(1.1); /* Enlarges both box and text */
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="menu">
-      <div class="logo">Daanyaal B</div>
-      <ul class="menu-items">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html" class="active">Education</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li class="spacer"></li>
-        <li class="accessibility-dropdown">
-          <a href="#">Accessibility</a>
-          <ul class="accessibility-options">
-            <li><button id="dark-mode-btn">Dark Mode</button></li>
-            <li><button id="increase-text-btn">Increase Text Size</button></li>
+    <header>
+        <nav class="menu">
+          <div class="logo">Daanyaal B</div>
+          <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li class="spacer"></li>
+            
+            <li class="accessibility-dropdown">
+                <a href="#">Accessibility</a>
+                <ul class="accessibility-options">
+                  <li><button id="dark-mode-btn">Dark Mode</button></li>
+                  <li><button id="increase-text-btn">Toggle Text Size</button></li>
+                </ul>
+              </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" id="clickMeButton">Click Me!</a></li>
           </ul>
-        </li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#" id="clickMeButton">Click Me!</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <ul class="background">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+        </nav>
+      </header>
 
   <main>
-    <section class="content-section">
-        <h3>Education</h3>
-        <ul>
-          <li>Isna High School (2017-2021)</li>
-          <li>Toronto Metropolitan University (2021-2026, expected)</li>
-        </ul>
-        
-        <h3>Educational Awards</h3>
-        <ul>
-          <li>Honor Roll (2018, 2020, 2021)</li>
-          <li>Entrance Scholarship of $5,000 (TMU)</li>
-          <li>Ted Rogers Badge for Python, Excel, and SQL</li>
-        </ul>
+    <div class="content-box">
+      <h3>Education</h3>
+      <ul>
+        <li>ISNA High School (2017-2021)</li>
+        <li>Toronto Metropolitan University (2021-2026, expected)</li>
+      </ul>
+      
+      <h3>Educational Awards</h3>
+      <ul>
+        <li>High School Honor Roll (2018, 2020, 2021)</li>
+        <li>Entrance Scholarship of $5,000 (TMU)</li>
+        <li>Ted Rogers Badge for Python, Excel, and SQL</li>
+      </ul>
 
-        <h3>Extracurricular Activities</h3>
-        <ul>
-          <li>High School Basketball, Soccer, and Volleyball Team Member</li>
-          <li>Volunteered for High School Recycling Initiative</li>
-          <li>Python Codecademy Certificate</li>
-          <li>Robotics Club</li>
-        </ul>
+      <h3>Extracurricular Activities</h3>
+      <ul>
+        <li>High School Basketball, Soccer, and Volleyball Team Member</li>
+        <li>Volunteered for High School Recycling Initiative</li>
+        <li>Python Codecademy Certificate</li>
+        <li>Robotics Club</li>
+      </ul>
 
-        <h3>Skills</h3>
-        <div class="skills-container">
-            <div class="skill">Python</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Excel</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">HTML/CSS</div>
-        </div>
-    </section>
+      <h3>Skills</h3>
+      <div class="skills-container">
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Excel</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML/CSS</div>
+      </div>
+    </div>
   </main>
   
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const darkModeBtn = document.getElementById("dark-mode-btn");
+      const increaseTextBtn = document.getElementById("increase-text-btn");
+
+      // Toggle Dark Mode
+      darkModeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+      });
+
+      // Toggle Increased Text Size
+      increaseTextBtn.addEventListener("click", () => {
+        document.body.classList.toggle("increase-text");
+      });
+    });
+  </script>
 </body>
 </html>
