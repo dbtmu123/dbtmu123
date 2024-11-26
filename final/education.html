@@ -62,32 +62,84 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    /* Center the box vertically */
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background-color: #f8f8f8;
+    /* Styling for the background */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
     }
 
-    main {
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
+    .background li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 25px;
+      height: 25px;
+      background: rgba(0, 0, 0, 0.1);
+      animation: float 20s infinite;
+    }
+
+    .background li:nth-child(1) {
+      left: 10%;
+      top: 20%;
+      animation-duration: 15s;
+    }
+
+    .background li:nth-child(2) {
+      left: 25%;
+      top: 40%;
+      animation-duration: 12s;
+    }
+
+    .background li:nth-child(3) {
+      left: 50%;
+      top: 10%;
+      animation-duration: 18s;
+    }
+
+    .background li:nth-child(4) {
+      left: 75%;
+      top: 30%;
+      animation-duration: 10s;
+    }
+
+    .background li:nth-child(5) {
+      left: 90%;
+      top: 50%;
+      animation-duration: 14s;
+    }
+
+    /* Animation for floating effect */
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-20px) rotate(45deg);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(0) rotate(90deg);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
+  <ul class="background">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
   <header>
-    <ul class="background">
-        <li></li><li></li><li></li>
-        <li></li><li></li><li></li>
-        <li></li><li></li><li></li>
-        <li></li><li></li><li></li>
-        <li></li><li></li><li></li>
-      </ul>
     <nav class="menu">
       <div class="logo">Daanyaal B</div>
       <ul class="menu-items">
@@ -104,6 +156,7 @@
           </ul>
         </li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#">Click Me!</a></li>
       </ul>
     </nav>
   </header>
@@ -141,6 +194,7 @@
       </div>
     </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
