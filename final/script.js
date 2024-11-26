@@ -1,4 +1,4 @@
-const titles = ["Welcome to My Page"];
+const titles = ["hello! i'm daanyaal. welcome to my site!"];
 let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -27,3 +27,20 @@ function type() {
 }
 
 document.addEventListener("DOMContentLoaded", type);
+
+// accessiblities
+// select buttons
+const darkModeBtn = document.getElementById("dark-mode-btn");
+const increaseTextBtn = document.getElementById("increase-text-btn");
+
+// Toggle Dark Mode
+darkModeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const sections = document.querySelectorAll("header, .content-section");
+    sections.forEach(section => section.classList.toggle("dark-mode"));
+});
+
+// Toggle Increased Text Size
+increaseTextBtn.addEventListener("click", () => {
+    document.body.classList.toggle("increase-text");
+});
