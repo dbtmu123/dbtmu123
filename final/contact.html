@@ -6,6 +6,32 @@
   <title>Contact Me</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+        transition: background-color 0.3s, color 0.3s; /* Smooth transitions for mode changes */
+    }
+    .dark-mode {
+        background-color: #121212; /* Dark background */
+        color: #ffffff; /* Light text for dark mode */
+    }
+    .dark-mode a {
+        color: #6babff; /* Ensure links remain visible */
+    }
+    .dark-mode input,
+    .dark-mode textarea,
+    .dark-mode select {
+        background-color: #333333; /* Dark mode for form inputs */
+        color: #ffffff;
+        border: 1px solid #555555;
+    }
+    .dark-mode input::placeholder,
+    .dark-mode textarea::placeholder {
+        color: #cccccc;
+    }
+
+    /* Increased Text Size */
+    .increase-text {
+        font-size: 1.2em; /* Increase base font size by 20% */
+    }
     .content-container {
     display: flex;
     flex-direction: column;
@@ -131,18 +157,33 @@
         </section>
         
         <script>
-            function submitForm() {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
-                const employmentType = document.querySelector('input[name="employmentType"]:checked')?.value;
-                const skills = Array.from(document.querySelectorAll('input[name="skills"]:checked')).map(cb => cb.value);
-                const referral = document.getElementById('referral').value;
-                
-                const formData = { name, email, message, employmentType, skills, referral };
-                localStorage.setItem('contactFormData', JSON.stringify(formData));
-                alert('Your information has been saved!');
-            }
+            const darkModeBtn = document.getElementById('dark-mode-btn');
+        const increaseTextBtn = document.getElementById('increase-text-btn');
+        let isDarkMode = false;
+        let isTextIncreased = false;
+
+        darkModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            isDarkMode = !isDarkMode;
+        });
+
+        increaseTextBtn.addEventListener('click', () => {
+            document.body.classList.toggle('increase-text');
+            isTextIncreased = !isTextIncreased;
+        });
+
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const employmentType = document.querySelector('input[name="employmentType"]:checked')?.value;
+            const skills = Array.from(document.querySelectorAll('input[name="skills"]:checked')).map(cb => cb.value);
+            const referral = document.getElementById('referral').value;
+
+            const formData = { name, email, message, employmentType, skills, referral };
+            localStorage.setItem('contactFormData', JSON.stringify(formData));
+            alert('Your information has been saved!');
+        }
         </script>
         
         <section>
