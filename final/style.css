@@ -512,7 +512,7 @@ body.dark-mode .menu-items a {
 }
 
 body.dark-mode .menu-items a.active {
-    background-color: #555555; /* Grey highlight for active link */
+    background-color: #6babff; /* Grey highlight for active link */
     color: #f8f8f8;
 }
 
