@@ -25,26 +25,6 @@
       margin-bottom: 10px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 20px;
-    }
-
-    ul li {
-      font-size: 1rem;
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #333;
-    }
-
     .skills-container {
       display: flex;
       flex-wrap: wrap;
@@ -170,22 +150,5 @@
       <div class="skill">HTML/CSS</div>
     </div>
   </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const darkModeBtn = document.getElementById("dark-mode-btn");
-      const increaseTextBtn = document.getElementById("increase-text-btn");
-
-      // Toggle Dark Mode
-      darkModeBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-      });
-
-      // Toggle Increase Text
-      increaseTextBtn.addEventListener("click", () => {
-        document.body.classList.toggle("increase-text");
-      });
-    });
-  </script>
 </body>
 </html>
