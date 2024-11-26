@@ -1,4 +1,11 @@
   /* General Body Styling */
+
+* {
+    @font-face { font-family: Grunge; src: url('RESEGRG_.TTF'); } 
+    @font-face { font-family: Grunge; font-weight: bold; src: url('RESEGRG_.TTF');}
+    font-family: Grunge;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
