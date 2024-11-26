@@ -485,3 +485,42 @@ main {
     background: #e0e0e0;
 }
 
+/* Dark Mode */
+body.dark-mode {
+    background-color: #000000; /* Black background for the body */
+    color: #ffffff; /* White text for the entire page */
+}
+
+/* Header Styling in Dark Mode */
+body.dark-mode header {
+    background-color: #222222; /* Darker grey for the header */
+}
+
+/* Menu Links in Dark Mode */
+body.dark-mode .menu-items a {
+    color: #ffffff; /* White menu links */
+}
+
+body.dark-mode .menu-items a.active {
+    background-color: #555555; /* Lighter grey highlight for active link */
+    color: #ffffff;
+}
+
+body.dark-mode .menu-items a:hover {
+    background-color: #444444; /* Slightly lighter grey for hover */
+}
+
+/* Typing Title in Dark Mode */
+body.dark-mode .typing-title {
+    color: #ffffff; /* White text for typing title */
+    border-right: 2px solid #ffffff; /* Match text color */
+}
+
+/* Background Animation in Dark Mode */
+body.dark-mode .background {
+    background: #000000; /* Black background for animated background */
+}
+
+body.dark-mode .background li {
+    background: rgba(255, 255, 255, 0.2); /* Light grey animated elements */
+}

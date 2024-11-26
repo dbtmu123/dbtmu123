@@ -1,3 +1,4 @@
+// Typing Animation Logic
 const titles = ["Welcome to my Site!"];
 let titleIndex = 0;
 let charIndex = 0;
@@ -26,21 +27,21 @@ function type() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", type);
-
 // Dark Mode and Increase Text Size Buttons
 document.addEventListener("DOMContentLoaded", () => {
-    const darkModeBtn = document.getElementById("dark-mode-btn");
-    const increaseTextBtn = document.getElementById("increase-text-btn");
-  
-    // Toggle Dark Mode
-    darkModeBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
-  
-    // Toggle Increased Text Size
-    increaseTextBtn.addEventListener("click", () => {
-      document.body.classList.toggle("increase-text");
-    });
+  const darkModeBtn = document.getElementById("dark-mode-btn");
+  const increaseTextBtn = document.getElementById("increase-text-btn");
+
+  // Toggle Dark Mode
+  darkModeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
   });
-  
+
+  // Toggle Increased Text Size
+  increaseTextBtn.addEventListener("click", () => {
+    document.body.classList.toggle("increase-text");
+  });
+
+  // Start the typing animation
+  type();
+});
