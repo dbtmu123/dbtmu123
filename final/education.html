@@ -6,20 +6,109 @@
   <title>Education</title>
   <link rel="stylesheet" href="style.css">
   <style>
-     .skills-container {
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .menu-items {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-items a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      color: #333;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+
+    .menu-items a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .menu-items .active {
+      background-color: #1a3d5d;
+      color: #ffffff;
+    }
+
+    .content-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+      color: #1a3d5d;
+      margin-bottom: 15px;
+    }
+
+    .content-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+    }
+
+    .content-section ul li {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .content-section ul li::before {
+      content: "•";
+      color: #1a3d5d;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .skills-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
-      margin-top: 7.5px;
+      gap: 8px;
+      margin-top: 10px;
     }
-    
+
     .skill {
       background-color: #f0f0f0;
-      padding: 4px 6px;
-      border-radius: 10px;
-      box-shadow: 0 1px 2.5px rgba(0, 0, 0, 0.1);
-      font-size: 2rem;
+      padding: 6px 10px;
+      border-radius: 15px;
+      font-size: 0.9rem;
       color: #333;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     body.dark-mode {
@@ -27,11 +116,23 @@
       color: #fff;
     }
 
-    body.dark-mode .skill {
+    body.dark-mode .content-section {
       background-color: #333;
       color: #fff;
     }
 
+    body.dark-mode .skill {
+      background-color: #444;
+      color: #fff;
+    }
+
+    body.dark-mode a {
+      color: #bbb;
+    }
+
+    body.dark-mode .menu-items a:hover {
+      background-color: #444;
+    }
   </style>
 </head>
 <body>
@@ -74,25 +175,20 @@
 
   <main>
     <section class="content-section">
-      <div class="image-container">
-        <img src="your-image.jpg" alt="Education Image">
-      </div>
-      <div class="text-container">
-        <h1 class="typing-title"></h1>
-        <h2>Education</h2>
+        <h3>Education</h3>
         <ul>
-          <li>Isna High School (2017-2021)</li>
+          <li>ISNA High School (2017-2021)</li>
           <li>Toronto Metropolitan University (2021-2026, expected)</li>
         </ul>
         
-        <h2>Educational Awards</h2>
+        <h3>Educational Awards</h3>
         <ul>
-          <li>Honor Roll (2018, 2020, 2021)</li>
+          <li>High School Honor Roll (2018, 2020, 2021)</li>
           <li>Entrance Scholarship of $5,000 (TMU)</li>
           <li>Ted Rogers Badge for Python, Excel, and SQL</li>
         </ul>
 
-        <h2>Extracurricular Activities</h2>
+        <h3>Extracurricular Activities</h3>
         <ul>
           <li>High School Basketball, Soccer, and Volleyball Team Member</li>
           <li>Volunteered for High School Recycling Initiative</li>
@@ -100,7 +196,7 @@
           <li>Robotics Club</li>
         </ul>
 
-        <h2>Skills</h2>
+        <h3>Skills</h3>
         <div class="skills-container">
             <div class="skill">Python</div>
             <div class="skill">SQL</div>
