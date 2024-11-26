@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const image = document.getElementById('toggleImage');
 
-image.addEventListener('click', () => { 
-image.classList.toggle('enlarged');
+image.addEventListener('click', () => {
+  image.classList.toggle('enlarged'); // Toggle the 'enlarged' class
 });
 
 // Get the button element

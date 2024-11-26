@@ -551,12 +551,14 @@ body.increase-text .typing-title {
   }
 
   .image-container img {
-    width: 300px;
-    transition: transform 0.3s ease, width 0.3s ease;
+    width: 300%; /* Fit image in the container */
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth enlarging */
+    transform-origin: bottom right; /* Keep the bottom-right corner fixed */
   }
-
+  
   .image-container img.enlarged {
-    transform: scale(1.5);
-    transition: transform 0.3s ease, width 0.3s ease;
+    transform: scale(1.5); /* Enlarge the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional shadow for focus */
   }
+  
