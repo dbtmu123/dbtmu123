@@ -389,7 +389,7 @@ main {
     height: calc(100vh - 80px); /* Adjust for header height */
 }
 
-.content-section {
+.content-section2 {
     display: flex;
     align-items: center;
     gap: 20px;
