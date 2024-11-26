@@ -16,6 +16,9 @@
 
     /* Center and style the white rectangle */
     .content-section {
+      display: flex;
+      flex-direction: column; /* Stack sections vertically */
+      gap: 20px; /* Add space between each section */
       max-width: 1200px; /* Make it a wide rectangle */
       margin: 50px auto; /* Center it horizontally */
       padding: 30px;
@@ -26,10 +29,15 @@
       transition: transform 0.3s ease; /* Smooth scaling when enlarged */
     }
 
+    .content-section > div {
+     display: flex;
+     flex-direction: column; /* Ensure heading and text stack inside each section */
+}
+
     .content-section h3 {
       font-size: 1.5rem;
       color: #333; /* Headings in dark gray */
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .content-section ul {
@@ -56,8 +64,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 15px;
-    }
+      margin-top: 10px;
+}
 
     .skill {
       background-color: #f0f0f0;
